@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "a5fe42f5-df13-40d4-b1b1-be2f7f4e3a90",
+		"name": "Memed Testes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39439286"
+	},
+	"item": [
+		{
+			"name": "Pescritor",
+			"item": [
+				{
+					"name": "Cadastro médico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"type\": \"usuarios\",\r\n    \"attributes\": {\r\n      \"external_id\": \"0753879b-362d-4126-9146-a16cf6eb14bd\",\r\n      \"nome\": \"Gustavo\",\r\n      \"sobrenome\": \"Ribeiro Sousa\",\r\n      \"cpf\": \"53076220403\",\r\n      \"board\": {\r\n            \"board_code\": \"CRM\",\r\n            \"board_number\": \"315435435\",\r\n            \"board_state\": \"SP\"},\r\n      \"email\": \"gustavo.ribeiro@meuhospital.com\",\r\n      \"telefone\": \"19938742708\",\r\n      \"sexo\": \"M\",\r\n      \"data_nascimento\": \"05/09/1972\"\r\n    },\r\n    \"relationships\": {\r\n      \"cidade\": {\r\n        \"data\": {\r\n          \"type\": \"cidades\",\r\n          \"id\": 1\r\n        }\r\n      },\r\n      \"especialidade\": {\r\n        \"data\": {\r\n          \"type\": \"especialidades\",\r\n          \"id\": 1\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/sinapse-prescricao/usuarios?api-key=iJGiB4kjDGOLeDFPWMG3no9VnN7Abpqe3w1jEFm6olkhkZD6oSfSmYCm&secret-key=Xe8M5GvBGCr4FStKfxXKisRo3SfYKI7KrTMkJpCAstzu2yXVN4av5nmL",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"sinapse-prescricao",
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "iJGiB4kjDGOLeDFPWMG3no9VnN7Abpqe3w1jEFm6olkhkZD6oSfSmYCm"
+								},
+								{
+									"key": "secret-key",
+									"value": "Xe8M5GvBGCr4FStKfxXKisRo3SfYKI7KrTMkJpCAstzu2yXVN4av5nmL"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --location 'https://integrations.api.memed.com.br/v1/sinapse-prescricao/usuarios?api-key=iJGiB4kjDGOLeDFPWMG3no9VnN7Abpqe3w1jEFm6olkhkZD6oSfSmYCm&secret-key=Xe8M5GvBGCr4FStKfxXKisRo3SfYKI7KrTMkJpCAstzu2yXVN4av5nmL' \\\r\n--header 'Accept: application/vnd.api+json' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n  \"data\": {\r\n    \"type\": \"usuarios\",\r\n    \"attributes\": {\r\n      \"external_id\": \"0753879b-362d-4126-9146-a16cf6eb14bd\",\r\n      \"nome\": \"Gustavo\",\r\n      \"sobrenome\": \"Ribeiro Sousa\",\r\n      \"cpf\": \"53076220403\",\r\n      \"board\": {\r\n            \"board_code\": \"CRM\",\r\n            \"board_number\": \"315435435\",\r\n            \"board_state\": \"SP\"},\r\n      \"email\": \"gustavo.ribeiro@meuhospital.com\",\r\n      \"telefone\": \"19938742708\",\r\n      \"sexo\": \"M\",\r\n      \"data_nascimento\": \"05/09/1972\"\r\n    },\r\n    \"relationships\": {\r\n      \"cidade\": {\r\n        \"data\": {\r\n          \"type\": \"cidades\",\r\n          \"id\": 1\r\n        }\r\n      },\r\n      \"especialidade\": {\r\n        \"data\": {\r\n          \"type\": \"especialidades\",\r\n          \"id\": 1\r\n        }\r\n      }\r\n    }\r\n  }\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Médico",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/sinapse-prescricao/usuarios/1234?api-key=iJGiB4kjDGOLeDFPWMG3no9VnN7Abpqe3w1jEFm6olkhkZD6oSfSmYCm&secret-key=Xe8M5GvBGCr4FStKfxXKisRo3SfYKI7KrTMkJpCAstzu2yXVN4av5nmL",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"sinapse-prescricao",
+								"usuarios",
+								"1234"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "iJGiB4kjDGOLeDFPWMG3no9VnN7Abpqe3w1jEFm6olkhkZD6oSfSmYCm"
+								},
+								{
+									"key": "secret-key",
+									"value": "Xe8M5GvBGCr4FStKfxXKisRo3SfYKI7KrTMkJpCAstzu2yXVN4av5nmL"
+								}
+							]
+						},
+						"description": "Generated from cURL:     curl --request GET \\\r\n        --url 'https://integrations.api.memed.com.br/v1/sinapse-prescricao/usuarios/1234?api-key=iJGiB4kjDGOLeDFPWMG3no9VnN7Abpqe3w1jEFm6olkhkZD6oSfSmYCm&secret-key=Xe8M5GvBGCr4FStKfxXKisRo3SfYKI7KrTMkJpCAstzu2yXVN4av5nmL'\\\r\n        --header 'Accept: application/vnd.api+json' \\\r\n        --header 'Cache-Control: no-cache' \\\r\n        --header 'Content-Type: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos Protocolos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/protocolos?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzMxNTc5LCIwOTZiZDY5MDBhYjYxMTMyZTkzNzUzYjU2NDA5NWM0MSIsIjIwMjMtMDItMDkiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjI1LjI2OTgxIl0.3i20Y7OZ3RSuyajuBlxGLxsjsMKqMB3egbNmjeKz5Y8",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"protocolos"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzMxNTc5LCIwOTZiZDY5MDBhYjYxMTMyZTkzNzUzYjU2NDA5NWM0MSIsIjIwMjMtMDItMDkiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjI1LjI2OTgxIl0.3i20Y7OZ3RSuyajuBlxGLxsjsMKqMB3egbNmjeKz5Y8"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --request GET \\\r\n  --url 'https://integrations.api.memed.com.br/v1/protocolos?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzMxNTc5LCIwOTZiZDY5MDBhYjYxMTMyZTkzNzUzYjU2NDA5NWM0MSIsIjIwMjMtMDItMDkiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjI1LjI2OTgxIl0.3i20Y7OZ3RSuyajuBlxGLxsjsMKqMB3egbNmjeKz5Y8' \\\r\n  --header 'Accept: application/vnd.api+json' \\\r\n  --header 'Content-Type: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Protocolo Individual",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"type\": \"protocolos\",\r\n    \"attributes\": {\r\n      \"nome\": \"string\",\r\n      \"medicamentos\": [\r\n        {\r\n          \"nome\": \"string\",\r\n          \"posologia\": \"string\",\r\n          \"quantidade\": 0,\r\n          \"composicao\": \"string\",\r\n          \"fabricante\": \"string\",\r\n          \"titularidade\": \"string\",\r\n          \"preco\": 0\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/protocolos?token=user_token",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"protocolos"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "user_token"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --request POST \\\r\n  --url 'https://integrations.api.memed.com.br/v1/protocolos?token=user_token' \\\r\n  --header 'Accept: application/vnd.api+json' \\\r\n  --header 'Content-Type: application/json' \\\r\n  --data '{\r\n  \"data\": {\r\n    \"type\": \"protocolos\",\r\n    \"attributes\": {\r\n      \"nome\": \"string\",\r\n      \"medicamentos\": [\r\n        {\r\n          \"nome\": \"string\",\r\n          \"posologia\": \"string\",\r\n          \"quantidade\": 0,\r\n          \"composicao\": \"string\",\r\n          \"fabricante\": \"string\",\r\n          \"titularidade\": \"string\",\r\n          \"preco\": 0\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Protocolo Geral",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"type\": \"protocolos\",\r\n    \"attributes\": {\r\n      \"nome\": string,\r\n      \"medicamentos\": [\r\n        {\r\n          \"id\": string,\r\n          \"posologia\": string,\r\n          \"nome\": string\r\n        },\r\n        {\r\n          \"id\": string,\r\n          \"nome\": string\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/protocolos/parceiros?api-key=NWJhMzEwNWUtYjJmMC00M2M0LWFlNmMtY2FjZDRhOTViMzNi&secret-key=YjdmNjUwZTUtZmE3My00OTJkLTkzNWMtMjg5NTRlMGU1MjIw",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"protocolos",
+								"parceiros"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "NWJhMzEwNWUtYjJmMC00M2M0LWFlNmMtY2FjZDRhOTViMzNi"
+								},
+								{
+									"key": "secret-key",
+									"value": "YjdmNjUwZTUtZmE3My00OTJkLTkzNWMtMjg5NTRlMGU1MjIw"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --request POST \\\r\n  --url 'https://integrations.api.memed.com.br/v1/protocolos/parceiros?api-key=NWJhMzEwNWUtYjJmMC00M2M0LWFlNmMtY2FjZDRhOTViMzNi&secret-key=YjdmNjUwZTUtZmE3My00OTJkLTkzNWMtMjg5NTRlMGU1MjIw' \\\r\n  --header 'Accept: application/vnd.api+json' \\\r\n  --header 'Content-Type: application/json' \\\r\n  --data '{\r\n  \"data\": {\r\n    \"type\": \"protocolos\",\r\n    \"attributes\": {\r\n      \"nome\": string,\r\n      \"medicamentos\": [\r\n        {\r\n          \"id\": string,\r\n          \"posologia\": string,\r\n          \"nome\": string\r\n        },\r\n        {\r\n          \"id\": string,\r\n          \"nome\": string\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Especialidades",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/especialidades",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"especialidades"
+							]
+						},
+						"description": "Generated from cURL:     curl --request GET \\\r\n    --url 'https://integrations.api.memed.com.br/v1/especialidades' \\\r\n    --header 'Accept: application/vnd.api+json' \\\r\n    --header 'Cache-Control: no-cache' \\\r\n    --header 'Content-Type: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Cidades",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/cidades",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"cidades"
+							]
+						},
+						"description": "Generated from cURL:     curl --request GET \\\r\n    --url 'https://integrations.api.memed.com.br/v1/cidades' \\\r\n    --header 'Accept: application/vnd.api+json' \\\r\n    --header 'Cache-Control: no-cache' \\\r\n    --header 'Content-Type: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Prescrição - Histórico",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/prescricoes?token=user_token",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"prescricoes"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "user_token"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --request GET \\\r\n  --url 'https://integrations.api.memed.com.br/v1/prescricoes?token=user_token' \\\r\n  --header 'Accept: application/vnd.api+json' \\\r\n  --header 'Content-Type: application/json'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prescrição",
+			"item": [
+				{
+					"name": "Salvar PDF Prescrição",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/prescricoes/{id_prescription}/url-document/full?token=user_token",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"prescricoes",
+								"{id_prescription}",
+								"url-document",
+								"full"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "user_token"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --request GET \\\r\n  --url 'https://integrations.api.memed.com.br/v1/prescricoes/{id_prescription}/url-document/full?token=user_token' \\\r\n  --header 'Accept: application/vnd.api+json' \\\r\n  --header 'Content-Type: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "Configurar Impressão",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n            \"type\": \"configuracoes-prescricao\",\r\n            \"attributes\": {\r\n                \"indice\": 1,\r\n                \"mostrar_label_nome_paciente\": true,\r\n                \"mostrar_label_paciente_especial\": 1,\r\n                \"mostrar_data\": 1,\r\n                \"mostrar_data_controle_especial\": 1,\r\n                \"fonte\": \"Helvetica\",\r\n                \"tamanho_fonte\": 14,\r\n                \"espacamento\": 30,\r\n                \"mostrar_unidades\": true,\r\n                \"mostrar_unidades_especial\": true,\r\n                \"separar_por_uso\": false,\r\n                \"mostrar_nome_fabricante\": true,\r\n                \"separador_uso\": 0,\r\n                \"separador_medicamento\": 0,\r\n                \"largura_papel\": 21,\r\n                \"altura_papel\": 29.7,\r\n                \"margem_esquerda\": 1.5,\r\n                \"margem_direita\": 1.5,\r\n                \"margem_superior\": 1,\r\n                \"margem_inferior\": 1,\r\n                \"titulo_fonte\": \"Droid Serif Italic\",\r\n                \"titulo_tamanho_fonte\": 22,\r\n                \"titulo\": \"Dr. Guga Ribeiro Teste\",\r\n                \"titulo_cor\": \"#372440\",\r\n                \"subtitulo_fonte\": \"Proxima Nova\",\r\n                \"subtitulo_tamanho_fonte\": 14,\r\n                \"subtitulo\": \"CRM: 12345MG - Ginecologia e obstetrícia - CXN2\",\r\n                \"subtitulo_cor\": \"#372440\",\r\n                \"tamanho_cabecalho\": 2,\r\n                \"rodape_fonte\": \"Proxima Nova\",\r\n                \"rodape_tamanho_fonte\": 14,\r\n                \"rodape\": \"\",\r\n                \"rodape_cor\": \"#8c8c8c\",\r\n                \"tamanho_rodape\": 2,\r\n                \"modelo_cabecalho_rodape\": 1,\r\n                \"ativo\": true,\r\n                \"imprimir_controle_especial\": false,\r\n                \"imprimir_controle_especial_antibioticos\": true,\r\n                \"imprimir_controle_especial_c4\": false,\r\n                \"imprimir_lme\": false,\r\n                \"nome_medico\": \"Teste da Silva Teste\",\r\n                \"endereco_medico\": \"RUA MATO GROSSO, 1100 - SANTO AGOSTINHO\",\r\n                \"cidade_medico\": \"São Paulo - MG\",\r\n                \"telefone_medico\": \"(11) 99999-9999\",\r\n                \"mostrar_cabecalho_rodape_simples\": 1,\r\n                \"modelo_rodape\": 0,\r\n                \"width_logo\": 0,\r\n                \"height_logo\": 0,\r\n                \"mostrar_cabecalho_rodape_especial\": 1,\r\n                \"logo_nome\": \"\",\r\n                \"logo_src\": \"\",\r\n                \"zoom_logo\": 0,\r\n                \"header_image\": \"https://memed-sandbox.s3-sa-east-1.amazonaws.com/parceiros/templates/parceiro-template-3-55847-header.jpeg\",\r\n                \"footer_image\": \"https://memed-sandbox.s3-sa-east-1.amazonaws.com/parceiros/templates/parceiro-template-3-55847-footer.jpeg\",\r\n                \"number_of_lme_copies\": 3\r\n            }\r\n     }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/opcoes-receituario?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzYwNTc4LCJjZWExMjhmYzBhNTFiNGQ4ZTUzODMwMzQ3ZWMwMjJmOCIsIjIwMjUtMDItMTIiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjMuNTU4NDciXQ.pU3C23SDWask7DtYvsRfXK10EHX5TFT-01AZa3yvt5c",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"opcoes-receituario"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzYwNTc4LCJjZWExMjhmYzBhNTFiNGQ4ZTUzODMwMzQ3ZWMwMjJmOCIsIjIwMjUtMDItMTIiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjMuNTU4NDciXQ.pU3C23SDWask7DtYvsRfXK10EHX5TFT-01AZa3yvt5c"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --location 'https://integrations.api.memed.com.br/v1/opcoes-receituario?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzYwNTc4LCJjZWExMjhmYzBhNTFiNGQ4ZTUzODMwMzQ3ZWMwMjJmOCIsIjIwMjUtMDItMTIiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjMuNTU4NDciXQ.pU3C23SDWask7DtYvsRfXK10EHX5TFT-01AZa3yvt5c' \\\r\n--header 'Accept: application/vnd.api+json' \\\r\n--header 'Content-Type: application/json' \\\r\n--data '{\r\n    \"data\": {\r\n            \"type\": \"configuracoes-prescricao\",\r\n            \"attributes\": {\r\n                \"indice\": 1,\r\n                \"mostrar_label_nome_paciente\": true,\r\n                \"mostrar_label_paciente_especial\": 1,\r\n                \"mostrar_data\": 1,\r\n                \"mostrar_data_controle_especial\": 1,\r\n                \"fonte\": \"Helvetica\",\r\n                \"tamanho_fonte\": 14,\r\n                \"espacamento\": 30,\r\n                \"mostrar_unidades\": true,\r\n                \"mostrar_unidades_especial\": true,\r\n                \"separar_por_uso\": false,\r\n                \"mostrar_nome_fabricante\": true,\r\n                \"separador_uso\": 0,\r\n                \"separador_medicamento\": 0,\r\n                \"largura_papel\": 21,\r\n                \"altura_papel\": 29.7,\r\n                \"margem_esquerda\": 1.5,\r\n                \"margem_direita\": 1.5,\r\n                \"margem_superior\": 1,\r\n                \"margem_inferior\": 1,\r\n                \"titulo_fonte\": \"Droid Serif Italic\",\r\n                \"titulo_tamanho_fonte\": 22,\r\n                \"titulo\": \"Dr. Guga Ribeiro Teste\",\r\n                \"titulo_cor\": \"#372440\",\r\n                \"subtitulo_fonte\": \"Proxima Nova\",\r\n                \"subtitulo_tamanho_fonte\": 14,\r\n                \"subtitulo\": \"CRM: 12345MG - Ginecologia e obstetrícia - CXN2\",\r\n                \"subtitulo_cor\": \"#372440\",\r\n                \"tamanho_cabecalho\": 2,\r\n                \"rodape_fonte\": \"Proxima Nova\",\r\n                \"rodape_tamanho_fonte\": 14,\r\n                \"rodape\": \"\",\r\n                \"rodape_cor\": \"#8c8c8c\",\r\n                \"tamanho_rodape\": 2,\r\n                \"modelo_cabecalho_rodape\": 1,\r\n                \"ativo\": true,\r\n                \"imprimir_controle_especial\": false,\r\n                \"imprimir_controle_especial_antibioticos\": true,\r\n                \"imprimir_controle_especial_c4\": false,\r\n                \"imprimir_lme\": false,\r\n                \"nome_medico\": \"Teste da Silva Teste\",\r\n                \"endereco_medico\": \"RUA MATO GROSSO, 1100 - SANTO AGOSTINHO\",\r\n                \"cidade_medico\": \"São Paulo - MG\",\r\n                \"telefone_medico\": \"(11) 99999-9999\",\r\n                \"mostrar_cabecalho_rodape_simples\": 1,\r\n                \"modelo_rodape\": 0,\r\n                \"width_logo\": 0,\r\n                \"height_logo\": 0,\r\n                \"mostrar_cabecalho_rodape_especial\": 1,\r\n                \"logo_nome\": \"\",\r\n                \"logo_src\": \"\",\r\n                \"zoom_logo\": 0,\r\n                \"header_image\": \"https://memed-sandbox.s3-sa-east-1.amazonaws.com/parceiros/templates/parceiro-template-3-55847-header.jpeg\",\r\n                \"footer_image\": \"https://memed-sandbox.s3-sa-east-1.amazonaws.com/parceiros/templates/parceiro-template-3-55847-footer.jpeg\",\r\n                \"number_of_lme_copies\": 3\r\n            }\r\n     }\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Importante Cabeçalho e Rodapé",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "template",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://integrations.api.memed.com.br/v1/opcoes-receituario/upload-template?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzQ0MTQ2LCI0NDhkZDQyZDcwYTM2NjQ3ZmRmZDRlY2I0OGQzOWM5YyIsIjIwMjMtMDItMDkiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjU1Mi4zOTQ1NiJd.8Ap9NOH_M5o5XGbkf1-cb5wjo4ufCaiq0utFkr22cuE",
+							"protocol": "https",
+							"host": [
+								"integrations",
+								"api",
+								"memed",
+								"com",
+								"br"
+							],
+							"path": [
+								"v1",
+								"opcoes-receituario",
+								"upload-template"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzQ0MTQ2LCI0NDhkZDQyZDcwYTM2NjQ3ZmRmZDRlY2I0OGQzOWM5YyIsIjIwMjMtMDItMDkiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjU1Mi4zOTQ1NiJd.8Ap9NOH_M5o5XGbkf1-cb5wjo4ufCaiq0utFkr22cuE"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --request POST \\\r\n  --url 'https://integrations.api.memed.com.br/v1/opcoes-receituario/upload-template?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.WzQ0MTQ2LCI0NDhkZDQyZDcwYTM2NjQ3ZmRmZDRlY2I0OGQzOWM5YyIsIjIwMjMtMDItMDkiLCJzaW5hcHNlLnByZXNjcmljYW8iLCJwYXJ0bmVyLjU1Mi4zOTQ1NiJd.8Ap9NOH_M5o5XGbkf1-cb5wjo4ufCaiq0utFkr22cuE' \\\r\n  --header 'Accept: application/vnd.api+json' \\\r\n  --header 'Content-Type: multipart/form-data' \\\r\n  --form 'template=@'"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
